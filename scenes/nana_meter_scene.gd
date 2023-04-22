@@ -15,7 +15,6 @@ func _process(delta):
 
 
 func _on_nana_slide_value_changed(value):
-		print($nanaSlide.value)
 		var nanaValue = $nanaSlide.value
 		$AnimationPlayer.play("nanaAnina")
 		$AnimationPlayer.seek(nanaValue, true)
@@ -23,3 +22,13 @@ func _on_nana_slide_value_changed(value):
 
 func _on_nana_slide_drag_ended(value_changed):
 	$AnimationPlayer.pause()
+
+
+
+
+func _on_credit_col_mouse_entered():
+	$creditss/Pansies.show()
+
+
+func _on_credit_col_mouse_exited():
+	$creditss/Pansies.hide()
