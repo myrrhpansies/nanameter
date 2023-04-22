@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c1hkqs3yrjo5u"]
+[gd_scene load_steps=15 format=3 uid="uid://c1hkqs3yrjo5u"]
 
 [ext_resource type="Texture2D" uid="uid://cqrokt3bnll0u" path="res://nanaArt/nanaBackground.png" id="1_jo3le"]
 [ext_resource type="Script" path="res://scenes/nana_meter_scene.gd" id="1_uglhq"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bhlcsaupbkvqa" path="res://nanaArt/nanaShade.png" id="4_2p6fi"]
 [ext_resource type="Texture2D" uid="uid://bce54htr3oajy" path="res://nanaArt/nanaLine.png" id="4_w6avp"]
 [ext_resource type="FontFile" uid="uid://8kb86vbdbhmv" path="res://nanaArt/VT323-Regular.ttf" id="7_sv7g4"]
+[ext_resource type="Texture2D" uid="uid://ds7or0880gkkc" path="res://nanaArt/nanaBox.png" id="8_ksc7y"]
+[ext_resource type="Texture2D" uid="uid://ikke2msdbjup" path="res://nanaArt/nanaGrabber.png" id="8_p26jc"]
+[ext_resource type="Texture2D" uid="uid://cxlccwnm36lud" path="res://nanaArt/nanaBar.png" id="9_kprq4"]
 
 [sub_resource type="Animation" id="Animation_ncndm"]
 resource_name = "nanaAnina"
@@ -224,6 +227,13 @@ _data = {
 "nanaAnina": SubResource("Animation_ncndm")
 }
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ff5aw"]
+texture = ExtResource("9_kprq4")
+expand_margin_left = 1.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+
 [node name="nanaMeterScene" type="Node2D"]
 position = Vector2(3, 0)
 script = ExtResource("1_uglhq")
@@ -302,11 +312,19 @@ virtual_keyboard_enabled = false
 middle_mouse_paste_enabled = false
 wrap_mode = 1
 
+[node name="NanaBox" type="Sprite2D" parent="."]
+position = Vector2(615, 911)
+scale = Vector2(0.929577, 1)
+texture = ExtResource("8_ksc7y")
+
 [node name="nanaSlide" type="HSlider" parent="."]
-offset_left = 69.0
-offset_top = 841.0
-offset_right = 1163.0
-offset_bottom = 966.0
+offset_left = 64.0
+offset_top = 843.0
+offset_right = 1158.0
+offset_bottom = 968.0
+theme_override_icons/grabber = ExtResource("8_p26jc")
+theme_override_icons/grabber_highlight = ExtResource("8_p26jc")
+theme_override_styles/slider = SubResource("StyleBoxTexture_ff5aw")
 max_value = 12.0
 step = 0.5
 
