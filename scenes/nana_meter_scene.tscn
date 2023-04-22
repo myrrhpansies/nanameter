@@ -1,0 +1,309 @@
+[gd_scene load_steps=11 format=3 uid="uid://c1hkqs3yrjo5u"]
+
+[ext_resource type="Texture2D" uid="uid://cqrokt3bnll0u" path="res://nanaArt/nanaBackground.png" id="1_jo3le"]
+[ext_resource type="Script" path="res://scenes/nana_meter_scene.gd" id="1_uglhq"]
+[ext_resource type="Texture2D" uid="uid://bik0gvcolnkoj" path="res://nanaArt/Frame.png" id="2_wsfob"]
+[ext_resource type="Texture2D" uid="uid://d0h6nelk2xbbw" path="res://nanaArt/colorNan.png" id="3_b7bt1"]
+[ext_resource type="Texture2D" uid="uid://bhlcsaupbkvqa" path="res://nanaArt/nanaShade.png" id="4_2p6fi"]
+[ext_resource type="Texture2D" uid="uid://bce54htr3oajy" path="res://nanaArt/nanaLine.png" id="4_w6avp"]
+[ext_resource type="FontFile" uid="uid://8kb86vbdbhmv" path="res://nanaArt/VT323-Regular.ttf" id="7_sv7g4"]
+
+[sub_resource type="Animation" id="Animation_ncndm"]
+resource_name = "nanaAnina"
+length = 12.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/outline:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/color:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/color:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.1, 4, 7, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 0.568627, 1), Color(1, 0.901, 0.00999999, 0.686275), Color(1, 0.901, 0.00999999, 0.686275), Color(0.921569, 0.647059, 0.176471, 0.780392)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/shade:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4, 5, 6, 7, 8, 9, 10, 11),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 3, 4, 6, 7]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/shade:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(4.5, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/Title:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["'Nana Meter"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/Info:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2, 4, 7, 8.5, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Taste: mild, starchy, not very sweet
+
+Texture: very firm
+
+Suggested use: unripe bananas are low in sugar and high in starch. as such, many people watching their carb intake go to green bananas. they also fry up nicely if plantains aren't availbale.
+", "Taste: mild, starchy, not very sweet
+
+Texture:  firm
+
+Suggested use: unripe bananas are low in sugar and high in starch. as such, many people watching their carb intake go to green bananas. they also fry up nicely if plantains aren't availbale.
+", "Taste:  sweet
+
+Texture: soft, not mushy
+
+Suggested use: yellow to slightly spotty bananas are perfect for banana splits, peanutbutter & banana sandwiches, or dipped in chocolate. however, ripe bananas are most commonly consumed as is. simply peel and enjoy!
+", "Taste:  very sweet
+
+Texture: very soft
+
+Suggested use: yellow to slightly spotty bananas are perfect for banana splits, peanutbutter & banana sandwiches, or dipped in chocolate. however, ripe bananas are most commonly consumed as is. simply peel and enjoy!
+", "Taste:  very sweet
+
+Texture: very soft to mushy
+
+Suggested use: The elevated sweetness and increased softness of an over ripe banana makes it right at home in a smoothy or mashed into overnight oats. Some find the texture unapeeling to eat as is but others have no problem digging in 
+", "Taste:  very sweet, slightly fermented
+
+Texture: mushy
+
+Suggested use: black bananas are extremely sweet and very, very, soft. this combination makes them perfect for baking. banana bread is always a great choice but many also use these super ripe bananas as an egg replacement in other baked goods"]
+}
+
+[sub_resource type="Animation" id="Animation_26tmi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/outline:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/color:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/color:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/shade:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/shade:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/Title:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["'Nana Meter"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/Info:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Taste: mild, starchy, not very sweet
+
+Texture: very firm
+
+Suggested use: Unripe bananas are low in sugar and high in starch. As such, many people watching their carb intake go to green bananas. They also fry up nicely.
+"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qcy3v"]
+_data = {
+"RESET": SubResource("Animation_26tmi"),
+"nanaAnina": SubResource("Animation_ncndm")
+}
+
+[node name="nanaMeterScene" type="Node2D"]
+position = Vector2(3, 0)
+script = ExtResource("1_uglhq")
+
+[node name="NanaBackground" type="Sprite2D" parent="."]
+position = Vector2(596.5, 499.5)
+scale = Vector2(0.4804, 0.5015)
+texture = ExtResource("1_jo3le")
+
+[node name="Frame" type="Sprite2D" parent="."]
+position = Vector2(598, 499)
+scale = Vector2(0.4792, 0.501)
+texture = ExtResource("2_wsfob")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qcy3v")
+}
+
+[node name="color" type="Sprite2D" parent="AnimationPlayer"]
+scale = Vector2(0.9872, 1)
+texture = ExtResource("3_b7bt1")
+centered = false
+hframes = 4
+
+[node name="shade" type="Sprite2D" parent="AnimationPlayer"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(9.99999, 0)
+scale = Vector2(0.9608, 1)
+texture = ExtResource("4_2p6fi")
+centered = false
+hframes = 8
+
+[node name="outline" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(5.00006, -1.00009)
+scale = Vector2(0.4872, 0.5015)
+texture = ExtResource("4_w6avp")
+centered = false
+
+[node name="Title" type="TextEdit" parent="AnimationPlayer"]
+offset_left = 118.0
+offset_top = 52.0
+offset_right = 568.0
+offset_bottom = 145.0
+focus_mode = 0
+theme_override_colors/background_color = Color(1, 0.854902, 0.788235, 1)
+theme_override_colors/font_color = Color(1, 0.482353, 0.439216, 1)
+theme_override_fonts/font = ExtResource("7_sv7g4")
+theme_override_font_sizes/font_size = 80
+text = "'Nana Meter"
+placeholder_text = "'Nana Meter"
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="Info" type="TextEdit" parent="AnimationPlayer"]
+offset_left = 698.0
+offset_top = 53.0
+offset_right = 1140.0
+offset_bottom = 772.0
+focus_mode = 0
+theme_override_colors/background_color = Color(1, 0.854902, 0.788235, 1)
+theme_override_colors/font_color = Color(0.999996, 0.374448, 0.339487, 1)
+theme_override_fonts/font = ExtResource("7_sv7g4")
+theme_override_font_sizes/font_size = 40
+text = "Taste: mild, starchy, not very sweet
+
+Texture: very firm
+
+Suggested use: Unripe bananas are low in sugar and high in starch. As such, many people watching their carb intake go to green bananas. They also fry up nicely.
+"
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+wrap_mode = 1
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = 69.0
+offset_top = 841.0
+offset_right = 1163.0
+offset_bottom = 966.0
