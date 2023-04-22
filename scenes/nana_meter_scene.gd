@@ -32,3 +32,7 @@ func _on_credit_col_mouse_entered():
 
 func _on_credit_col_mouse_exited():
 	$creditss/Pansies.hide()
+
+
+func _on_nana_slide_gui_input(event):
+	$AnimationPlayer.pause()
