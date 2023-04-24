@@ -13,7 +13,6 @@ func _process(delta):
 
 
 
-
 func _on_nana_slide_value_changed(value):
 		var nanaValue = $nanaSlide.value
 		$AnimationPlayer.play("nanaAnina")
@@ -36,3 +35,10 @@ func _on_credit_col_mouse_exited():
 
 func _on_nana_slide_gui_input(event):
 	$AnimationPlayer.pause()
+
+
+
+
+
+func _on_button_pressed():
+	$ColorRect.hide()

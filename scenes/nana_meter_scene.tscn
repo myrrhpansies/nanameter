@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c1hkqs3yrjo5u"]
+[gd_scene load_steps=33 format=3 uid="uid://c1hkqs3yrjo5u"]
 
 [ext_resource type="Texture2D" uid="uid://cqrokt3bnll0u" path="res://nanaArt/nanaBackground.png" id="1_jo3le"]
 [ext_resource type="Script" path="res://scenes/nana_meter_scene.gd" id="1_uglhq"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cxlccwnm36lud" path="res://nanaArt/nanaBar.png" id="9_kprq4"]
 [ext_resource type="Texture2D" uid="uid://cxjx57yi7jr0t" path="res://nanaArt/star.png" id="11_10ckk"]
 [ext_resource type="Texture2D" uid="uid://ckrv020ht2bvw" path="res://nanaArt/pansies.png" id="12_eqrqc"]
+[ext_resource type="AudioStream" uid="uid://soskxfm0avsi" path="res://nanaArt/nana.ogg" id="13_omixv"]
 
 [sub_resource type="Animation" id="Animation_26tmi"]
 length = 0.001
@@ -196,12 +197,12 @@ tracks/6/keys = {
 
 Texture: very firm
 
-Suggested use: unripe bananas are low in sugar and high in starch. as such, many people watching their carb intake go to green bananas. they also fry up nicely if plantains aren't available.
+Suggested use: unripe bananas are low in sugar and high in starch. as such, many people watching their carb intake go to green bananas. they also fry up nicely if plantains aren't available
 ", "Taste: mild, starchy, not very sweet
 
 Texture:  firm
 
-Suggested use: unripe bananas are low in sugar and high in starch. as such, many people watching their carb intake go to green bananas. they also fry up nicely if plantains aren't availbale.
+Suggested use: unripe bananas are low in sugar and high in starch. as such, many people watching their carb intake go to green bananas. they also fry up nicely if plantains aren't available
 ", "Taste:  sweet
 
 Texture: soft, not mushy
@@ -216,7 +217,7 @@ Suggested use: yellow to slightly spotty bananas are perfect for banana splits, 
 
 Texture: very soft to mushy
 
-Suggested use: The elevated sweetness and increased softness of an over ripe banana makes it right at home in a smoothy or mashed into overnight oats. Some find the texture unapeeling to eat as is but others have no problem digging in 
+Suggested use: The elevated sweetness and increased softness of an over ripe banana makes it right at home in a smoothy or mashed into overnight oats. Some find the texture unappeeling to eat as is but others have no problem digging in 
 ", "Taste:  very sweet, slightly fermented
 
 Texture: mushy
@@ -230,6 +231,79 @@ _data = {
 "nanaAnina": SubResource("Animation_ncndm")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p4umj"]
+bg_color = Color(1, 0.482353, 0.439216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l8rr5"]
+bg_color = Color(1, 0.482353, 0.439216, 1)
+border_width_left = 2
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.482353, 0.439216, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 3
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="Theme" id="Theme_jdgxp"]
+VSlider/styles/grabber_area = SubResource("StyleBoxFlat_p4umj")
+VSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_l8rr5")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0e2do"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.999994, 0.307984, 0.283975, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6m2cb"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w0aic"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i0a3x"]
+bg_color = Color(1, 0.482353, 0.439216, 1)
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcm0b"]
+bg_color = Color(1, 0.482353, 0.439216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_061f0"]
+bg_color = Color(1, 0.52549, 0.439216, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pokno"]
+bg_color = Color(0.999994, 0.307984, 0.283975, 1)
+
+[sub_resource type="Theme" id="Theme_p0qfm"]
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_0e2do")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_6m2cb")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_w0aic")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_i0a3x")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_pcm0b")
+VSlider/styles/grabber_area = SubResource("StyleBoxFlat_061f0")
+VSlider/styles/slider = SubResource("StyleBoxFlat_pokno")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ff5aw"]
 texture = ExtResource("9_kprq4")
 expand_margin_left = 1.0
@@ -239,6 +313,17 @@ expand_margin_bottom = 20.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mt7qu"]
 radius = 36.0555
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wlbnu"]
+bg_color = Color(0.993215, 0.799356, 0.772442, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_en05o"]
+bg_color = Color(0.996078, 0.894118, 0.882353, 1)
+
+[sub_resource type="Theme" id="Theme_jhlac"]
+Button/styles/focus = SubResource("StyleBoxFlat_wlbnu")
+Button/styles/hover = null
+Button/styles/normal = SubResource("StyleBoxFlat_en05o")
 
 [node name="nanaMeterScene" type="Node2D"]
 position = Vector2(3, 0)
@@ -285,6 +370,7 @@ offset_top = 54.0
 offset_right = 444.0
 offset_bottom = 147.0
 focus_mode = 0
+theme = SubResource("Theme_jdgxp")
 theme_override_colors/background_color = Color(1, 0.854902, 0.788235, 1)
 theme_override_colors/font_color = Color(1, 0.482353, 0.439216, 1)
 theme_override_fonts/font = ExtResource("7_sv7g4")
@@ -301,6 +387,7 @@ offset_top = 53.0
 offset_right = 1140.0
 offset_bottom = 772.0
 focus_mode = 0
+theme = SubResource("Theme_p0qfm")
 theme_override_colors/background_color = Color(1, 0.854902, 0.788235, 1)
 theme_override_colors/font_color = Color(0.999996, 0.374448, 0.339487, 1)
 theme_override_fonts/font = ExtResource("7_sv7g4")
@@ -353,8 +440,46 @@ texture = ExtResource("11_10ckk")
 position = Vector2(539, 94)
 shape = SubResource("CircleShape2D_mt7qu")
 
+[node name="nanaSong" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_omixv")
+autoplay = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 1
+offset_left = 285.0
+offset_top = 217.0
+offset_right = 929.0
+offset_bottom = 717.0
+color = Color(0.864481, 0.540543, 0.469721, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 636.0
+offset_bottom = 420.0
+theme_override_fonts/normal_font = ExtResource("7_sv7g4")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "[center]don't know what to do with your banana? just match your banana to the one on the screen using the slider below"
+fit_content = true
+scroll_active = false
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 403.0
+offset_right = 376.0
+offset_bottom = 448.0
+theme = SubResource("Theme_jhlac")
+theme_override_colors/font_color = Color(1, 0.440868, 0.308184, 1)
+theme_override_fonts/font = ExtResource("7_sv7g4")
+theme_override_font_sizes/font_size = 36
+text = "ok"
+
 [connection signal="drag_ended" from="nanaSlide" to="." method="_on_nana_slide_drag_ended"]
 [connection signal="gui_input" from="nanaSlide" to="." method="_on_nana_slide_gui_input"]
 [connection signal="value_changed" from="nanaSlide" to="." method="_on_nana_slide_value_changed"]
 [connection signal="mouse_entered" from="creditss/creditCol" to="." method="_on_credit_col_mouse_entered"]
 [connection signal="mouse_exited" from="creditss/creditCol" to="." method="_on_credit_col_mouse_exited"]
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]

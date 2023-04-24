@@ -13,7 +13,7 @@ config_version=5
 config/name="nanana"
 run/main_scene="res://scenes/nana_meter_scene.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://nanaArt/IconNew001.ico"
 
 [display]
 
@@ -21,6 +21,13 @@ window/size/viewport_width=1200
 window/size/viewport_height=1000
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
+
+[input]
+
+click={
+"deadzone": 0.5,
+"events": [null, null]
+}
 
 [rendering]
 
