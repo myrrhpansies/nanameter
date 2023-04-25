@@ -450,7 +450,7 @@ offset_left = 285.0
 offset_top = 217.0
 offset_right = 929.0
 offset_bottom = 717.0
-color = Color(0.864481, 0.540543, 0.469721, 1)
+color = Color(0.862745, 0.541176, 0.47451, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
 layout_mode = 0
